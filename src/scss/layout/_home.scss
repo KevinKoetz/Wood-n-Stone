@@ -49,6 +49,9 @@
   .controls {
     display: flex;
     justify-content: flex-end;
+    .input-group {
+      width: max-content;
+    }
   }
 
   .items {
