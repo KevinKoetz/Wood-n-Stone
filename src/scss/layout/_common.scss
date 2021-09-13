@@ -6,6 +6,11 @@ body {
 
     header {
         background-color: var(--bs-dark);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
         .navbar {
             .navbar-brand {
 
@@ -36,6 +41,7 @@ body {
     }
     
     main {
+        margin-top: 3.5rem;
         flex-grow: 1;
     }
 
