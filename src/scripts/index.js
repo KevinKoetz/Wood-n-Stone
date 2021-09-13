@@ -68,6 +68,11 @@ async function loadPage(hash) {
   if (page != undefined) {
     document.getElementById("main").innerHTML = page;
 
+    let burgermenu = document.getElementsByClassName("navbar-toggler")[0]
+    if(!burgermenu.classList.contains("collapsed")){
+        burgermenu.click();
+    }
+
     if (hash === "#home") {
       let images = document.getElementsByClassName("carouselImage");
       for (const image of images) {
