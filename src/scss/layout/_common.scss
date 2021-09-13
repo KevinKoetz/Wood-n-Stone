@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    header {
+        background-color: var(--bs-dark);
+        .navbar {
+            #navbarNav {
+                justify-content: flex-end;
+            }
+        }
+    }
+    
+    main {
+        flex-grow: 1;
+        background-color: var(--bs-light);
+        
+    }
+
+    footer {
+        background-color: var(--bs-dark);
+        .navbar {
+            #navbarNav {
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+

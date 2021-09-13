@@ -1,2 +1,4 @@
 // This is where you can import other stylesheets or write your scss code
+@import "./abstract/variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./layout/common";
