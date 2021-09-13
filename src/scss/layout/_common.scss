@@ -49,11 +49,18 @@ body {
         background-color: var(--bs-dark);
         
         .navbar {
-            font-size: 0.7em;
+            font-size: 0.9em;
             align-items: center;
-            .navbar-brand {
+            flex-wrap: nowrap;
 
+            @include media-breakpoint-up(sm) {
                 font-size: 1em;
+            }
+            .navbar-brand {
+                margin: 0;
+                font-size: 1em;
+                padding-right: 0;
+                padding-left: 0;
 
                 figure{
                     height: 1em;
