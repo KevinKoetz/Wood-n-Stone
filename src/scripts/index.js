@@ -12,8 +12,7 @@ function prepNavLinks() {
   }
 }
 
-function onLinkClick(link) {
-  console.log(link);
+function switchActive(hash) {
   //Find all links that are marked as active
   let active = [];
   for (const navLink of navLinks) {
@@ -28,11 +27,16 @@ function onLinkClick(link) {
 
   //Loop through all nav links at set those with the same hash value to be active
   for (const navLink of navLinks) {
-    if (navLink.hash === this.hash) {
+    if (navLink.hash === hash) {
       navLink.classList.add("active");
       navLink.setAttribute("aria-current", "page");
     }
   }
+}
+
+function onLinkClick(link) {
+  console.log(link);
+  switchActive(this.hash);
 
   //Load the page into main
   loadPage(this.hash);
@@ -68,15 +72,16 @@ async function loadPage(hash) {
   if (page != undefined) {
     document.getElementById("main").innerHTML = page;
 
-    let burgermenu = document.getElementsByClassName("navbar-toggler")[0]
-    if(!burgermenu.classList.contains("collapsed")){
-        burgermenu.click();
+    let burgermenu = document.getElementsByClassName("navbar-toggler")[0];
+    if (!burgermenu.classList.contains("collapsed")) {
+      burgermenu.click();
     }
 
     if (hash === "#home") {
       let images = document.getElementsByClassName("carouselImage");
       for (const image of images) {
         image.addEventListener("click", () => {
+          switchActive("#references");
           loadPage("#references");
         });
       }
