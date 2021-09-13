@@ -47,7 +47,7 @@ async function loadPage(hash) {
   let url =
     window.location.origin +
     window.location.pathname +
-    `pages/${hash.replace("#", "_")}.html`;
+    `pages/${hash.replace("#", "")}.html`;
   let page = undefined;
 
   //Get Page from Server
