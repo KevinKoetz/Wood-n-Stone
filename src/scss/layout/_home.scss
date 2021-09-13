@@ -1,12 +1,12 @@
 #home {
+  & > * {
+    margin: 1em 0;
+  }
   .carousel {
     height: 20em;
-    margin: 1em 0;
     border-radius: 0.5em;
     overflow: hidden;
     position: relative;
-
-    
 
     &::after {
       content: "";
@@ -22,7 +22,7 @@
     }
 
     .carousel-indicators {
-        z-index: 4;
+      z-index: 4;
     }
 
     .carousel-inner {
@@ -36,9 +36,9 @@
           height: 100%;
           width: 100%;
           object-fit: cover;
-          
+
           &:hover {
-              cursor: pointer;
+            cursor: pointer;
           }
         }
       }
@@ -50,7 +50,76 @@
   }
 
   .controls {
-      display: flex;
-      justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .items {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: repeat(auto-fit, 260px);
+    grid-auto-rows: 1fr;
+    justify-content: center;
+    grid-auto-flow: row;
+
+    @include media-breakpoint-up(md) {
+        justify-content: space-between;
+    }
+
+    .item {
+      position: relative;
+      .item-count {
+        font-weight: 700;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.5em;
+        border-bottom: 4px solid var(--bs-primary);
+        border-left: 4px solid var(--bs-primary);
+        border-radius: 0 0 0 1em;
+        background-color: white;
+        z-index: 1;
+      }
+
+      .card-img-top {
+          height: 10em;
+          object-fit: cover;
+      }
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        form {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+
+          table tr > th,
+          table tr > td {
+            padding-right: 1em;
+          }
+
+          input[type="number"] {
+            width: 100%;
+          }
+
+          input[type="number"]:invalid {
+            border-color: red;
+          }
+
+          .btn {
+            align-self: center;
+          }
+        }
+      }
+    }
+
+    .item.unavail {
+        .card-img-top {
+            filter: grayscale(1);
+        }
+    }
   }
 }

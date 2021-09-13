@@ -1,51 +1,522 @@
 <div id="home">
-    <section id="referencesCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#referencesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#referencesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#referencesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  <section
+    id="referencesCarousel"
+    class="carousel slide"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#referencesCarousel"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#referencesCarousel"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#referencesCarousel"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" id="one">
+        <img
+          src="../images/IMG_20200809_1517285.jpg"
+          class="carouselImage"
+          alt="..."
+        />
+        <div class="carousel-caption">
+          <h5>Kitchen Island</h5>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active" id="one">
-            <img src="../images/IMG_20200809_1517285.jpg" class="carouselImage" alt="...">
-            <div class="carousel-caption">
-              <h5>Kitchen Island</h5>
-            </div>
-          </div>
-          <div class="carousel-item" id="two">
-            <img src="../images/IMG-20210313-WA0005.jpg" class="carouselImage" alt="...">
-            <div class="carousel-caption">
-              <h5>Saddle cabinet</h5>
-            </div>
-          </div>
-          <div class="carousel-item" id="three">
-            <img src="../images/IMG_20180408_1445357.jpg" class="carouselImage" alt="...">
-            <div class="carousel-caption">
-              <h5>Hanging cabinet</h5>
-            </div>
-          </div>
+      </div>
+      <div class="carousel-item" id="two">
+        <img
+          src="../images/IMG-20210313-WA0005.jpg"
+          class="carouselImage"
+          alt="..."
+        />
+        <div class="carousel-caption">
+          <h5>Saddle cabinet</h5>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#referencesCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#referencesCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </section>
+      </div>
+      <div class="carousel-item" id="three">
+        <img
+          src="../images/IMG_20180408_1445357.jpg"
+          class="carouselImage"
+          alt="..."
+        />
+        <div class="carousel-caption">
+          <h5>Hanging cabinet</h5>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#referencesCarousel"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#referencesCarousel"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </section>
 
-      <section class="controls">
-          <button type="button" class="btn btn-outline-primary dropdown-toggle" id="sort" data-bs-toggle="dropdown" aria-expanded="false">Sort: <span id="sortType">Availability</span></button>
-          <ul class="dropdown-menu">
-            <li class="dropdown-item">Availability</li>
-            <li class="dropdown-item">Price</li>
-            <li class="dropdown-item">Latest</li>
-          </ul>
-      </section>
+  <section class="controls">
+    <button
+      type="button"
+      class="btn btn-outline-primary dropdown-toggle"
+      id="sort"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Sort: <span id="sortType">Availability</span>
+    </button>
+    <ul class="dropdown-menu">
+      <li class="dropdown-item">Availability</li>
+      <li class="dropdown-item">Price</li>
+      <li class="dropdown-item">Latest</li>
+    </ul>
+  </section>
 
-      <section class="items">
-          
-      </section>
+  <section class="items">
+    <div class="card item">
+        <div class="item-count"><span class="item-count-number">5</span> pc.</div>
+      <img
+        src="../images/IMG_20210206_1728310.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <div>
+          <h5 class="card-title">Cat figure</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+        </div>
+        <form>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col"><label for="amount">Amount:</label></th>
+                <th scope="col">Price:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="number"
+                    min="0"
+                    max="5"
+                    value="1"
+                    name="amount"
+                    id="amount"
+                    class="form-text"
+                    required
+                  />
+                </td>
+                <td>14.99€</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button type="button" class="btn btn-outline-primary">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card item">
+        <div class="item-count"><span class="item-count-number">4</span> pc.</div>
+      <img
+        src="../images/IMG_20210703_1050193.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <div>
+          <h5 class="card-title">Earrings</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+        </div>
+        <form>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col"><label for="amount">Amount:</label></th>
+                <th scope="col">Price:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="number"
+                    min="0"
+                    max="5"
+                    value="1"
+                    name="amount"
+                    id="amount"
+                    class="form-text"
+                    required
+                  />
+                </td>
+                <td>17.99€</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button type="button" class="btn btn-outline-primary">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card item">
+        <div class="item-count"><span class="item-count-number">2</span> pc.</div>
+      <img
+        src="../images/IMG-20210201-WA0006.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <div>
+          <h5 class="card-title">Spotlight</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+        </div>
+        <form>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col"><label for="amount">Amount:</label></th>
+                <th scope="col">Price:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="number"
+                    min="0"
+                    max="5"
+                    value="1"
+                    name="amount"
+                    id="amount"
+                    class="form-text"
+                    required
+                  />
+                </td>
+                <td>14.99€</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button type="button" class="btn btn-outline-primary">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card item">
+        <div class="item-count"><span class="item-count-number">1</span> pc.</div>
+      <img
+        src="../images/IMG_20210627_1444533.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <div>
+          <h5 class="card-title">Puzzle</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+        </div>
+        <form>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col"><label for="amount">Amount:</label></th>
+                <th scope="col">Price:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="number"
+                    min="0"
+                    max="5"
+                    value="1"
+                    name="amount"
+                    id="amount"
+                    class="form-text"
+                    required
+                  />
+                </td>
+                <td>14.99€</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button type="button" class="btn btn-outline-primary">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card item unavail">
+        <div class="item-count"><span class="item-count-number">0</span> pc.</div>
+      <img
+        src="../images/IMG_20210703_1051024.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <div>
+          <h5 class="card-title">Earrings</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+        </div>
+        <form>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col"><label for="amount">Amount:</label></th>
+                <th scope="col">Price:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="number"
+                    min="0"
+                    max="5"
+                    value="1"
+                    name="amount"
+                    id="amount"
+                    class="form-text"
+                    required
+                  />
+                </td>
+                <td>14.99€</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button type="button" class="btn btn-outline-primary">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card item unavail">
+        <div class="item-count"><span class="item-count-number">0</span> pc.</div>
+      <img
+        src="../images/IMG_20180408_1445084.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <div>
+          <h5 class="card-title">Ceiling Light</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+        </div>
+        <form>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col"><label for="amount">Amount:</label></th>
+                <th scope="col">Price:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="number"
+                    min="0"
+                    max="5"
+                    value="1"
+                    name="amount"
+                    id="amount"
+                    class="form-text"
+                    required
+                  />
+                </td>
+                <td>14.99€</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button type="button" class="btn btn-outline-primary">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card item unavail">
+        <div class="item-count"><span class="item-count-number">0</span> pc.</div>
+      <img
+        src="../images/IMG_20190622_1014208.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <div>
+          <h5 class="card-title">Hair clip</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+        </div>
+        <form>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col"><label for="amount">Amount:</label></th>
+                <th scope="col">Price:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="number"
+                    min="0"
+                    max="5"
+                    value="1"
+                    name="amount"
+                    id="amount"
+                    class="form-text"
+                    required
+                  />
+                </td>
+                <td>14.99€</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button type="button" class="btn btn-outline-primary">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card item unavail">
+        <div class="item-count"><span class="item-count-number">0</span> pc.</div>
+      <img
+        src="../images/IMG_20210225_0924287.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <div>
+          <h5 class="card-title">Guitar pick</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+        </div>
+        <form>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col"><label for="amount">Amount:</label></th>
+                <th scope="col">Price:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="number"
+                    min="0"
+                    max="5"
+                    value="1"
+                    name="amount"
+                    id="amount"
+                    class="form-text"
+                    required
+                  />
+                </td>
+                <td>14.99€</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button type="button" class="btn btn-outline-primary">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card item unavail">
+        <div class="item-count"><span class="item-count-number">0</span> pc.</div>
+      <img
+        src="../images/IMG_20210627_1444439.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <div>
+          <h5 class="card-title">Jewel box</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+        </div>
+        <form>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col"><label for="amount">Amount:</label></th>
+                <th scope="col">Price:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="number"
+                    min="0"
+                    max="5"
+                    value="1"
+                    name="amount"
+                    id="amount"
+                    class="form-text"
+                    required
+                  />
+                </td>
+                <td>14.99€</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button type="button" class="btn btn-outline-primary">Add</button>
+        </form>
+      </div>
+    </div>
+  </section>
 </div>
-
