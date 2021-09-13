@@ -72,4 +72,5 @@ async function loadPage(href) {
 
 window.addEventListener("load", () => {
   prepNavLinks();
+  loadPage("#home");
 });
