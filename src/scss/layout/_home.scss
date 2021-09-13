@@ -1,0 +1,51 @@
+#home {
+  .carousel {
+    height: 20em;
+    margin: 1em 0;
+    border-radius: 0.5em;
+    overflow: hidden;
+    position: relative;
+
+    
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        hsl(0, 0%, 0%, 0.7),
+        hsl(0, 0%, 0%, 0)
+      );
+      pointer-events: none;
+    }
+
+    .carousel-indicators {
+        z-index: 4;
+    }
+
+    .carousel-inner {
+      height: 100%;
+
+      .carousel-item {
+        height: 100%;
+
+        img {
+          display: block;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          
+          &:hover {
+              cursor: pointer;
+          }
+        }
+      }
+
+      .carousel-caption {
+        z-index: 2;
+      }
+    }
+  }
+}

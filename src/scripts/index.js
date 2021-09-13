@@ -4,6 +4,7 @@ var navLinks = undefined;
 function prepNavLinks() {
   //Find all of them
   navLinks = document.getElementsByClassName("nav-link");
+  console.log(navLinks);
 
   //Add Click handler to navLinks
   for (const navLink of navLinks) {
@@ -12,6 +13,7 @@ function prepNavLinks() {
 }
 
 function onLinkClick(link) {
+  console.log(link);
   //Find all links that are marked as active
   let active = [];
   for (const navLink of navLinks) {
@@ -34,13 +36,14 @@ function onLinkClick(link) {
 
   //Load the page into main
   loadPage(this.hash);
+  prepNavLinks();
 }
 
-async function loadPage(href) {
+async function loadPage(hash) {
   let url =
     window.location.origin +
     window.location.pathname +
-    `pages/${href.replace("#", "_")}.html`;
+    `pages/${hash.replace("#", "_")}.html`;
   let page = undefined;
 
   //Get Page from Server
@@ -64,6 +67,15 @@ async function loadPage(href) {
   //Load Page into main
   if (page != undefined) {
     document.getElementById("main").innerHTML = page;
+
+    if (hash === "#home") {
+      let images = document.getElementsByClassName("carouselImage");
+      for (const image of images) {
+        image.addEventListener("click", () => {
+          loadPage("#references");
+        });
+      }
+    }
   } else {
     document.getElementById("main").innerHTML =
       "Ooops, something went wrong. Can not load the page.";
@@ -74,3 +86,5 @@ window.addEventListener("load", () => {
   prepNavLinks();
   loadPage("#home");
 });
+
+window.addEventListener("change", () => {});
