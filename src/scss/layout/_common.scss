@@ -7,6 +7,28 @@ body {
     header {
         background-color: var(--bs-dark);
         .navbar {
+            .navbar-brand {
+
+                font-size: 1.2em;
+
+                figure{
+                    height: 1em;
+                    display: inline-block;
+                    margin: 0;
+                    img{
+                        height:100%;
+                    }
+                }
+
+                span {
+                    font-size: 1em;
+                }
+            }
+
+            .navbar-toggler {
+                font-size: 1em;
+            }
+
             #navbarNav {
                 justify-content: flex-end;
             }
@@ -19,7 +41,28 @@ body {
 
     footer {
         background-color: var(--bs-dark);
+        
         .navbar {
+            font-size: 0.7em;
+            align-items: center;
+            .navbar-brand {
+
+                font-size: 1em;
+
+                figure{
+                    height: 1em;
+                    display: inline-block;
+                    margin: 0;
+                    img{
+                        height:100%;
+                    }
+                }
+
+                span {
+                    font-size: 1em;
+                }
+            }
+
             #navbarNav {
                 justify-content: flex-end;
             }
