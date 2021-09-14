@@ -7759,7 +7759,7 @@ textarea.form-control-lg {
   pointer-events: auto !important;
 }
 
-.rounded {
+.rounded, #home .carousel {
   border-radius: 0.25rem !important;
 }
 
@@ -11133,16 +11133,17 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: var(--bs-light);
+  width: 100vw;
+  overflow-x: hidden;
 }
 body:after {
   content: "";
   position: fixed;
+  width: 100vw;
+  height: 100vh;
   top: 0;
-  bottom: 0;
   left: 0;
-  right: 0;
   background-image: url(https://kevinkoetz.github.io/Wood-n-Stone/images/den-trushtin-ApsLq7FAbiE-unsplash_sm.jpg);
-  background-attachment: fixed;
   background-size: cover;
   z-index: -1;
   opacity: 0.5;
@@ -11199,6 +11200,7 @@ body header {
   left: 0;
   right: 0;
   z-index: 50;
+  width: 100vw;
 }
 body header .navbar .navbar-brand {
   font-size: 1.2em;
@@ -11247,6 +11249,7 @@ body main > div > * {
 }
 body footer {
   position: relative;
+  width: 100vw;
 }
 body footer .navbar {
   font-size: 0.9em;
@@ -11281,7 +11284,6 @@ body footer .navbar #navbarNav {
 
 #home .carousel {
   height: 20em;
-  border-radius: 0.5em;
   overflow: hidden;
   position: relative;
 }
