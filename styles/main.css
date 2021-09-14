@@ -11123,7 +11123,7 @@ body:after {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: url(../../images/den-trushtin-ApsLq7FAbiE-unsplash_sm.jpg);
+  background-image: url(./images/den-trushtin-ApsLq7FAbiE-unsplash_sm.jpg);
   background-attachment: fixed;
   background-size: cover;
   z-index: -1;
@@ -11131,12 +11131,12 @@ body:after {
 }
 @media (min-width: 768px) {
   body:after {
-    background-image: url(../../images/den-trushtin-ApsLq7FAbiE-unsplash_md.jpg);
+    background-image: url(./images/den-trushtin-ApsLq7FAbiE-unsplash_md.jpg);
   }
 }
 @media (min-width: 1400px) {
   body:after {
-    background-image: url(../../images/den-trushtin-ApsLq7FAbiE-unsplash_lg.jpg);
+    background-image: url(./images/den-trushtin-ApsLq7FAbiE-unsplash_lg.jpg);
   }
 }
 body header,
@@ -11149,7 +11149,7 @@ body footer:after {
   display: block;
   inset: 0;
   position: absolute;
-  background: url(../../images/joshua-bartell-6vvIBTvL90A-unsplash_1.jpg);
+  background: url(./images/joshua-bartell-6vvIBTvL90A-unsplash_1.jpg);
   z-index: -2;
   filter: brightness(0.4);
 }
