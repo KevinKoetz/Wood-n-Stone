@@ -1,89 +1,143 @@
+@use "sass:math";
+
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: var(--bs-light);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bs-light);
 
-    header {
-        background-color: var(--bs-dark);
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 50;
-        .navbar {
-            .navbar-brand {
-
-                font-size: 1.2em;
-
-                figure{
-                    height: 1em;
-                    display: inline-block;
-                    margin: 0;
-                    img{
-                        height:100%;
-                    }
-                }
-
-                span {
-                    font-size: 1em;
-                }
-            }
-
-            .navbar-toggler {
-                font-size: 1em;
-            }
-
-            #navbarNav {
-                justify-content: flex-end;
-            }
-        }
+  &:after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url(../../images/den-trushtin-ApsLq7FAbiE-unsplash_sm.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.5;
+    @include media-breakpoint-up(md) {
+      background-image: url(../../images/den-trushtin-ApsLq7FAbiE-unsplash_md.jpg);
     }
+
+    @include media-breakpoint-up(xxl) {
+      background-image: url(../../images/den-trushtin-ApsLq7FAbiE-unsplash_lg.jpg);
+    }
+  }
+
+  header,
+  footer {
+    isolation: isolate;
+    &:after {
+      content: "";
+      display: block;
+      inset: 0;
+      position: absolute;
+      background: url(../../images/joshua-bartell-6vvIBTvL90A-unsplash_1.jpg);
+      z-index: -2;
+      filter: brightness(0.4);
+    }
+    &::before {
+        --height: 4px;
+        --blur: 2px;
+        content: "";
+        display: block;
+        width: 100%;
+        height:var(--height);
+        background-color: transparent;
+        position: absolute;
+        bottom: calc(var(--height) / -2);
+        backdrop-filter: blur(var(--blur));
+    }
+  }
+
+  footer {
+      &::before {
+          bottom: unset;
+          top: calc(var(--height) / -2);
+      }
+  }
+
+  header {
+    /* background-color: var(--bs-dark); */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+
     
-    main {
-        margin-top: 3.5rem;
-        flex-grow: 1;
 
-        > div > * {
-            margin: 1em 0;
+    .navbar {
+      .navbar-brand {
+        font-size: 1.2em;
+
+        figure {
+          height: 1em;
+          display: inline-block;
+          margin: 0;
+          img {
+            height: 100%;
+          }
         }
-    }
 
-    footer {
-        background-color: var(--bs-dark);
-        
-        .navbar {
-            font-size: 0.9em;
-            align-items: center;
-            flex-wrap: nowrap;
-
-            @include media-breakpoint-up(sm) {
-                font-size: 1em;
-            }
-            .navbar-brand {
-                margin: 0;
-                font-size: 1em;
-                padding-right: 0;
-                padding-left: 0;
-
-                figure{
-                    height: 1em;
-                    display: inline-block;
-                    margin: 0;
-                    img{
-                        height:100%;
-                    }
-                }
-
-                span {
-                    font-size: 1em;
-                }
-            }
-
-            #navbarNav {
-                justify-content: flex-end;
-            }
+        span {
+          font-size: 1em;
         }
+      }
+
+      .navbar-toggler {
+        font-size: 1em;
+      }
+
+      #navbarNav {
+        justify-content: flex-end;
+      }
     }
+  }
+
+  main {
+    margin-top: 3.5rem;
+    flex-grow: 1;
+
+    > div > * {
+      margin: 1em 0;
+    }
+  }
+
+  footer {
+    position: relative;
+
+    .navbar {
+      font-size: 0.9em;
+      align-items: center;
+      flex-wrap: nowrap;
+
+      @include media-breakpoint-up(sm) {
+        font-size: 1em;
+      }
+      .navbar-brand {
+        margin: 0;
+        font-size: 1em;
+        padding-right: 0;
+        padding-left: 0;
+
+        figure {
+          height: 1em;
+          display: inline-block;
+          margin: 0;
+          img {
+            height: 100%;
+          }
+        }
+
+        span {
+          font-size: 1em;
+        }
+      }
+
+      #navbarNav {
+        justify-content: flex-end;
+      }
+    }
+  }
 }
-
