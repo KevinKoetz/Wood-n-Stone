@@ -1,0 +1,17 @@
+#contact {
+    .contactForm {
+        @extend .card;
+        @extend .card-body;
+        &>*{
+            margin-bottom: 1rem;
+        }
+
+        textarea {
+            min-height: 20em;
+        }
+
+        button {
+            align-self: flex-end;
+        }
+    }
+}
