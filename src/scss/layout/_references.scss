@@ -3,6 +3,7 @@
     color: var(--bs-primary);
   }
   .reference {
+    overflow: hidden;
     &:not(:last-child) {
       margin-bottom: 3em;
     }
@@ -26,29 +27,21 @@
 
     @include media-breakpoint-up(md) {
       section {
-        padding: 1em;
-
-        
-
-        > *:not(img) {
-          padding: 0;
-        }
         img {
           width: 100%;
-          padding: 0.25rem;
-          background-color: var(--bs-white);
-          border: 1px solid var(--bs-gray-300);
-          border-radius: 0.25rem;
         }
       }
 
       section:not(:first-of-type) {
         img {
           width: 50%;
-          margin-right: 0;
+          margin-right: 1em;
           margin-left: 1em;
           float: right;
-          
+          padding: 0.25rem;
+          background-color: var(--bs-white);
+          border: 1px solid var(--bs-gray-300);
+          border-radius: 0.25rem;
         }
       }
     }
