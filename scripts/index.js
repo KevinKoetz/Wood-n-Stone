@@ -95,7 +95,11 @@ async function loadPage(hash) {
 
 window.addEventListener("load", () => {
   prepNavLinks();
-  loadPage("#about");
+  if(window.location.hash === ""){
+    loadPage("#home");
+  } else {
+    loadPage(window.location.hash);
+  }
 });
 
 window.addEventListener("change", () => {});
