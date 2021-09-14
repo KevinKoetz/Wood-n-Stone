@@ -1,1 +1,51 @@
-Cart
+<div id="cart">
+  <div class="wrapper">
+    <h4>Shopping Cart</h4>
+    <section class="items">
+      <div class="item">
+        <h5 class="item-title">Cat figure</h5>
+        <img src="./images/IMG_20210206_1728310.jpg" alt="..." />
+        <div>
+          <form>
+            <input
+              type="number"
+              min="1"
+              max="5"
+              value="1"
+              name="amount-1"
+              id="amount-1"
+              class="form-text amount form-control"
+              required
+            />
+            x <span class="price">14.99€</span>
+
+            <i class="fas fa-trash-alt"></i>
+          </form>
+        </div>
+      </div>
+
+      <div class="item">
+        <h5 class="item-title">Earrings</h5>
+        <img src="./images/IMG_20210703_1050193.jpg" alt="..." />
+        <div>
+          <form>
+            <input
+              type="number"
+              min="1"
+              max="5"
+              value="1"
+              name="amount-2"
+              id="amount-2"
+              class="form-text amount form-control"
+              required
+            />
+            x <span class="price">14.99€</span>
+
+            <i class="fas fa-trash-alt"></i>
+          </form>
+        </div>
+      </div>
+    </section>
+    <span class="total">Total: <span id="total">29.98€</span></span>
+  </div>
+</div>
