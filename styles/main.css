@@ -592,7 +592,7 @@ progress {
   height: auto;
 }
 
-.img-thumbnail, #about article img {
+.img-thumbnail, #cart .items .item img, #about article img {
   padding: 0.25rem;
   background-color: #fff;
   border: 1px solid #dee2e6;
@@ -4400,7 +4400,7 @@ textarea.form-control-lg {
   color: #fff;
 }
 
-.card, #references .reference, #contact .contactForm {
+.card, #references .reference, #contact .contactForm, #cart .wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -4411,32 +4411,33 @@ textarea.form-control-lg {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
-.card > hr, #references .reference > hr, #contact .contactForm > hr {
+.card > hr, #references .reference > hr, #contact .contactForm > hr, #cart .wrapper > hr {
   margin-right: 0;
   margin-left: 0;
 }
-.card > .list-group, #references .reference > .list-group, #contact .contactForm > .list-group {
+.card > .list-group, #references .reference > .list-group, #contact .contactForm > .list-group, #cart .wrapper > .list-group {
   border-top: inherit;
   border-bottom: inherit;
 }
-.card > .list-group:first-child, #references .reference > .list-group:first-child, #contact .contactForm > .list-group:first-child {
+.card > .list-group:first-child, #references .reference > .list-group:first-child, #contact .contactForm > .list-group:first-child, #cart .wrapper > .list-group:first-child {
   border-top-width: 0;
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
 }
-.card > .list-group:last-child, #references .reference > .list-group:last-child, #contact .contactForm > .list-group:last-child {
+.card > .list-group:last-child, #references .reference > .list-group:last-child, #contact .contactForm > .list-group:last-child, #cart .wrapper > .list-group:last-child {
   border-bottom-width: 0;
   border-bottom-right-radius: calc(0.25rem - 1px);
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
-.card > .card-header + .list-group, #references .reference > .card-header + .list-group, #contact .contactForm > .card-header + .list-group,
+.card > .card-header + .list-group, #references .reference > .card-header + .list-group, #contact .contactForm > .card-header + .list-group, #cart .wrapper > .card-header + .list-group,
 .card > .list-group + .card-footer,
 #references .reference > .list-group + .card-footer,
-#contact .contactForm > .list-group + .card-footer {
+#contact .contactForm > .list-group + .card-footer,
+#cart .wrapper > .list-group + .card-footer {
   border-top: 0;
 }
 
-.card-body, #contact .contactForm {
+.card-body, #contact .contactForm, #cart .wrapper {
   flex: 1 1 auto;
   padding: 1rem 1rem;
 }
@@ -4517,7 +4518,7 @@ textarea.form-control-lg {
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
 
-.card-group > .card, #references .card-group > .reference, #contact .card-group > .contactForm {
+.card-group > .card, #references .card-group > .reference, #contact .card-group > .contactForm, #cart .card-group > .wrapper {
   margin-bottom: 0.75rem;
 }
 @media (min-width: 576px) {
@@ -4525,44 +4526,48 @@ textarea.form-control-lg {
     display: flex;
     flex-flow: row wrap;
   }
-  .card-group > .card, #references .card-group > .reference, #contact .card-group > .contactForm {
+  .card-group > .card, #references .card-group > .reference, #contact .card-group > .contactForm, #cart .card-group > .wrapper {
     flex: 1 0 0%;
     margin-bottom: 0;
   }
-  .card-group > .card + .card, #references .card-group > .reference + .card, #references .card-group > .card + .reference, #references .card-group > .reference + .reference, #contact .card-group > .contactForm + .card, #contact #references .card-group > .contactForm + .reference, #references #contact .card-group > .contactForm + .reference, #contact .card-group > .card + .contactForm, #contact #references .card-group > .reference + .contactForm, #references #contact .card-group > .reference + .contactForm, #contact .card-group > .contactForm + .contactForm {
+  .card-group > .card + .card, #references .card-group > .reference + .card, #references .card-group > .card + .reference, #references .card-group > .reference + .reference, #contact .card-group > .contactForm + .card, #contact #references .card-group > .contactForm + .reference, #references #contact .card-group > .contactForm + .reference, #contact .card-group > .card + .contactForm, #contact #references .card-group > .reference + .contactForm, #references #contact .card-group > .reference + .contactForm, #contact .card-group > .contactForm + .contactForm, #cart .card-group > .wrapper + .card, #cart #references .card-group > .wrapper + .reference, #references #cart .card-group > .wrapper + .reference, #cart #contact .card-group > .wrapper + .contactForm, #contact #cart .card-group > .wrapper + .contactForm, #cart .card-group > .card + .wrapper, #cart #references .card-group > .reference + .wrapper, #references #cart .card-group > .reference + .wrapper, #cart #contact .card-group > .contactForm + .wrapper, #contact #cart .card-group > .contactForm + .wrapper, #cart .card-group > .wrapper + .wrapper {
     margin-left: 0;
     border-left: 0;
   }
-  .card-group > .card:not(:last-child), #references .card-group > .reference:not(:last-child), #contact .card-group > .contactForm:not(:last-child) {
+  .card-group > .card:not(:last-child), #references .card-group > .reference:not(:last-child), #contact .card-group > .contactForm:not(:last-child), #cart .card-group > .wrapper:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-top, #references .card-group > .reference:not(:last-child) .card-img-top, #contact .card-group > .contactForm:not(:last-child) .card-img-top,
+  .card-group > .card:not(:last-child) .card-img-top, #references .card-group > .reference:not(:last-child) .card-img-top, #contact .card-group > .contactForm:not(:last-child) .card-img-top, #cart .card-group > .wrapper:not(:last-child) .card-img-top,
 .card-group > .card:not(:last-child) .card-header,
 #references .card-group > .reference:not(:last-child) .card-header,
-#contact .card-group > .contactForm:not(:last-child) .card-header {
+#contact .card-group > .contactForm:not(:last-child) .card-header,
+#cart .card-group > .wrapper:not(:last-child) .card-header {
     border-top-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-bottom, #references .card-group > .reference:not(:last-child) .card-img-bottom, #contact .card-group > .contactForm:not(:last-child) .card-img-bottom,
+  .card-group > .card:not(:last-child) .card-img-bottom, #references .card-group > .reference:not(:last-child) .card-img-bottom, #contact .card-group > .contactForm:not(:last-child) .card-img-bottom, #cart .card-group > .wrapper:not(:last-child) .card-img-bottom,
 .card-group > .card:not(:last-child) .card-footer,
 #references .card-group > .reference:not(:last-child) .card-footer,
-#contact .card-group > .contactForm:not(:last-child) .card-footer {
+#contact .card-group > .contactForm:not(:last-child) .card-footer,
+#cart .card-group > .wrapper:not(:last-child) .card-footer {
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:first-child), #references .card-group > .reference:not(:first-child), #contact .card-group > .contactForm:not(:first-child) {
+  .card-group > .card:not(:first-child), #references .card-group > .reference:not(:first-child), #contact .card-group > .contactForm:not(:first-child), #cart .card-group > .wrapper:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-top, #references .card-group > .reference:not(:first-child) .card-img-top, #contact .card-group > .contactForm:not(:first-child) .card-img-top,
+  .card-group > .card:not(:first-child) .card-img-top, #references .card-group > .reference:not(:first-child) .card-img-top, #contact .card-group > .contactForm:not(:first-child) .card-img-top, #cart .card-group > .wrapper:not(:first-child) .card-img-top,
 .card-group > .card:not(:first-child) .card-header,
 #references .card-group > .reference:not(:first-child) .card-header,
-#contact .card-group > .contactForm:not(:first-child) .card-header {
+#contact .card-group > .contactForm:not(:first-child) .card-header,
+#cart .card-group > .wrapper:not(:first-child) .card-header {
     border-top-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-bottom, #references .card-group > .reference:not(:first-child) .card-img-bottom, #contact .card-group > .contactForm:not(:first-child) .card-img-bottom,
+  .card-group > .card:not(:first-child) .card-img-bottom, #references .card-group > .reference:not(:first-child) .card-img-bottom, #contact .card-group > .contactForm:not(:first-child) .card-img-bottom, #cart .card-group > .wrapper:not(:first-child) .card-img-bottom,
 .card-group > .card:not(:first-child) .card-footer,
 #references .card-group > .reference:not(:first-child) .card-footer,
-#contact .card-group > .contactForm:not(:first-child) .card-footer {
+#contact .card-group > .contactForm:not(:first-child) .card-footer,
+#cart .card-group > .wrapper:not(:first-child) .card-footer {
     border-bottom-left-radius: 0;
   }
 }
@@ -11180,6 +11185,7 @@ body footer::before {
   background-color: transparent;
   position: absolute;
   bottom: calc(var(--height) / -2);
+  -webkit-backdrop-filter: blur(var(--blur));
   backdrop-filter: blur(var(--blur));
 }
 body footer::before {
@@ -11213,6 +11219,24 @@ body header .navbar .navbar-toggler {
 }
 body header .navbar #navbarNav {
   justify-content: flex-end;
+}
+body header .navbar .fa-shopping-cart {
+  position: relative;
+}
+body header .navbar .fa-shopping-cart::after {
+  content: "2";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+  clip-path: circle();
+  position: absolute;
+  background-color: var(--bs-danger);
+  font-family: var(--bs-font-monospace);
+  font-size: 0.7em;
+  right: 0;
+  bottom: 0;
+  transform: translate(50%, 50%);
 }
 body main {
   margin-top: 3.5rem;
@@ -11303,18 +11327,19 @@ body footer .navbar #navbarNav {
 #home .items {
   display: grid;
   gap: 0.5em;
-  grid-template-columns: repeat(auto-fit, 260px);
+  grid-template-columns: repeat(auto-fit, 250px);
   grid-auto-rows: 1fr;
   justify-content: center;
   grid-auto-flow: row;
 }
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   #home .items {
     justify-content: space-between;
   }
 }
 #home .items .item {
   position: relative;
+  width: 100%;
 }
 #home .items .item .item-count {
   font-weight: 700;
@@ -11332,29 +11357,31 @@ body footer .navbar #navbarNav {
   height: 10em;
   object-fit: cover;
 }
-#home .items .item .card-body, #home .items .item #contact .contactForm, #contact #home .items .item .contactForm {
+#home .items .item .card-body, #home .items .item #contact .contactForm, #contact #home .items .item .contactForm, #home .items .item #cart .wrapper, #cart #home .items .item .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-#home .items .item .card-body form, #home .items .item #contact .contactForm form, #contact #home .items .item .contactForm form {
+#home .items .item .card-body form, #home .items .item #contact .contactForm form, #contact #home .items .item .contactForm form, #home .items .item #cart .wrapper form, #cart #home .items .item .wrapper form {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-#home .items .item .card-body form table tr > th, #home .items .item #contact .contactForm form table tr > th, #contact #home .items .item .contactForm form table tr > th,
+#home .items .item .card-body form table tr > th, #home .items .item #contact .contactForm form table tr > th, #contact #home .items .item .contactForm form table tr > th, #home .items .item #cart .wrapper form table tr > th, #cart #home .items .item .wrapper form table tr > th,
 #home .items .item .card-body form table tr > td,
 #home .items .item #contact .contactForm form table tr > td,
-#contact #home .items .item .contactForm form table tr > td {
+#contact #home .items .item .contactForm form table tr > td,
+#home .items .item #cart .wrapper form table tr > td,
+#cart #home .items .item .wrapper form table tr > td {
   padding-right: 1em;
 }
-#home .items .item .card-body form input[type=number], #home .items .item #contact .contactForm form input[type=number], #contact #home .items .item .contactForm form input[type=number] {
+#home .items .item .card-body form input[type=number], #home .items .item #contact .contactForm form input[type=number], #contact #home .items .item .contactForm form input[type=number], #home .items .item #cart .wrapper form input[type=number], #cart #home .items .item .wrapper form input[type=number] {
   width: 100%;
 }
-#home .items .item .card-body form input[type=number]:invalid, #home .items .item #contact .contactForm form input[type=number]:invalid, #contact #home .items .item .contactForm form input[type=number]:invalid {
+#home .items .item .card-body form input[type=number]:invalid, #home .items .item #contact .contactForm form input[type=number]:invalid, #contact #home .items .item .contactForm form input[type=number]:invalid, #home .items .item #cart .wrapper form input[type=number]:invalid, #cart #home .items .item .wrapper form input[type=number]:invalid {
   border-color: red;
 }
-#home .items .item .card-body form .btn, #home .items .item #contact .contactForm form .btn, #contact #home .items .item .contactForm form .btn {
+#home .items .item .card-body form .btn, #home .items .item #contact .contactForm form .btn, #contact #home .items .item .contactForm form .btn, #home .items .item #cart .wrapper form .btn, #cart #home .items .item .wrapper form .btn {
   align-self: center;
 }
 #home .items .item.unavail .card-img-top {
@@ -11380,6 +11407,59 @@ body footer .navbar #navbarNav {
   width: 100%;
 }
 
+#cart .wrapper > * {
+  position: relative;
+}
+#cart .wrapper > *:after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  background-color: var(--bs-gray-500);
+}
+#cart h4, #cart .h4 {
+  margin: 0;
+  padding-bottom: 1rem;
+}
+#cart .items .item {
+  padding: 1em 0;
+  position: relative;
+}
+#cart .items .item:after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  background-color: var(--bs-gray-300);
+}
+#cart .items .item form {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+#cart .items .item .amount {
+  display: inline;
+  width: min-content;
+}
+#cart .items .item .fa-trash-alt {
+  color: var(--bs-danger);
+}
+#cart .items .item img {
+  width: 100%;
+}
+#cart .total {
+  padding: 1em 0;
+  font-weight: 700;
+  text-align: end;
+}
+
 #contact .contactForm > * {
   margin-bottom: 1rem;
 }
@@ -11392,6 +11472,9 @@ body footer .navbar #navbarNav {
 
 #references hr {
   color: var(--bs-primary);
+}
+#references .reference {
+  overflow: hidden;
 }
 #references .reference:not(:last-child) {
   margin-bottom: 3em;
@@ -11410,24 +11493,18 @@ body footer .navbar #navbarNav {
   margin-bottom: 1em;
 }
 @media (min-width: 768px) {
-  #references .reference section {
-    padding: 1em;
-  }
-  #references .reference section > *:not(img) {
-    padding: 0;
-  }
   #references .reference section img {
     width: 100%;
+  }
+  #references .reference section:not(:first-of-type) img {
+    width: 50%;
+    margin-right: 1em;
+    margin-left: 1em;
+    float: right;
     padding: 0.25rem;
     background-color: var(--bs-white);
     border: 1px solid var(--bs-gray-300);
     border-radius: 0.25rem;
-  }
-  #references .reference section:not(:first-of-type) img {
-    width: 50%;
-    margin-right: 0;
-    margin-left: 1em;
-    float: right;
   }
 }
 
