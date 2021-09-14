@@ -1,0 +1,20 @@
+#about {
+    display: grid;
+    place-content: center;
+    min-height: 100%;
+    article{
+        display: block;
+        padding: 2em;
+        max-width: 30em;
+        height: min-content;
+        margin-left: auto;
+        margin-right: auto;
+        img {
+            @extend .img-thumbnail;
+            margin-bottom: 1em;
+            border-radius: 50%;
+            width: 100%;
+            
+        }
+    }
+}
