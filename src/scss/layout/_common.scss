@@ -5,16 +5,17 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: var(--bs-light);
+  width: 100vw;
+  overflow-x: hidden;
 
   &:after {
     content: "";
     position: fixed;
+    width: 100vw;
+    height: 100vh;
     top:0;
-      bottom: 0;
       left: 0;
-      right: 0;
     background-image: url(https://kevinkoetz.github.io/Wood-n-Stone/images/den-trushtin-ApsLq7FAbiE-unsplash_sm.jpg);
-    background-attachment: fixed;
     background-size: cover;
     z-index: -1;
     opacity: 0.5;
@@ -72,7 +73,7 @@ body {
     left: 0;
     right: 0;
     z-index: 50;
-
+    width: 100vw;
     
 
     .navbar {
@@ -133,7 +134,7 @@ body {
 
   footer {
     position: relative;
-
+    width: 100vw;
     .navbar {
       font-size: 0.9em;
       align-items: center;
