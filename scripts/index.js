@@ -36,7 +36,6 @@ function switchActive(hash) {
 
 function onLinkClick(link) {
   console.log(link);
-  switchActive(this.hash);
 
   //Load the page into main
   loadPage(this.hash);
@@ -49,6 +48,8 @@ async function loadPage(hash) {
     window.location.pathname +
     `pages/${hash.replace("#", "")}.html`;
   let page = undefined;
+
+  switchActive(hash);
 
   //Get Page from Server
   page = await new Promise((resolve, reject) => {
@@ -94,7 +95,7 @@ async function loadPage(hash) {
 
 window.addEventListener("load", () => {
   prepNavLinks();
-  loadPage("#home");
+  loadPage("#references");
 });
 
 window.addEventListener("change", () => {});
