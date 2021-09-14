@@ -1,7 +1,7 @@
 #home {
   .carousel {
+    @extend .rounded;
     height: 20em;
-    border-radius: 0.5em;
     overflow: hidden;
     position: relative;
 
