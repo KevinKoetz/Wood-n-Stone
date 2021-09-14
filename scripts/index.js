@@ -95,7 +95,7 @@ async function loadPage(hash) {
 
 window.addEventListener("load", () => {
   prepNavLinks();
-  loadPage("#references");
+  loadPage("#about");
 });
 
 window.addEventListener("change", () => {});

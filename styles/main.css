@@ -592,7 +592,7 @@ progress {
   height: auto;
 }
 
-.img-thumbnail {
+.img-thumbnail, #about article img {
   padding: 0.25rem;
   background-color: #fff;
   border: 1px solid #dee2e6;
@@ -11155,8 +11155,8 @@ body footer:after {
 }
 body header::before,
 body footer::before {
-  --height: 4px;
-  --blur: 2px;
+  --height: 0.5rem;
+  --blur: 0.1rem;
   content: "";
   display: block;
   width: 100%;
@@ -11338,6 +11338,25 @@ body footer .navbar #navbarNav {
 }
 #home .items .item.unavail .card-img-top {
   filter: grayscale(1);
+}
+
+#about {
+  display: grid;
+  place-content: center;
+  min-height: 100%;
+}
+#about article {
+  display: block;
+  padding: 2em;
+  max-width: 30em;
+  height: min-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+#about article img {
+  margin-bottom: 1em;
+  border-radius: 50%;
+  width: 100%;
 }
 
 #references hr {
