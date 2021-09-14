@@ -52,7 +52,9 @@ body {
         background-color: transparent;
         position: absolute;
         bottom: calc(var(--height) / -2);
+        -webkit-backdrop-filter: blur(var(--blur));
         backdrop-filter: blur(var(--blur));
+        
     }
   }
 
@@ -97,6 +99,25 @@ body {
 
       #navbarNav {
         justify-content: flex-end;
+      }
+
+      .fa-shopping-cart {
+        position: relative;
+        &::after {
+          content: "2";
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0.5em;
+          clip-path: circle();
+          position: absolute;
+          background-color: var(--bs-danger);
+          font-family: var(--bs-font-monospace);
+          font-size: 0.7em;
+          right:0;
+          bottom:0;
+          transform: translate(50%, 50%);
+        }
       }
     }
   }
