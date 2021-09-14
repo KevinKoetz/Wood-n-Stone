@@ -10,17 +10,17 @@ body {
     content: "";
     position: fixed;
     inset: 0;
-    background-image: url(../../images/den-trushtin-ApsLq7FAbiE-unsplash_sm.jpg);
+    background-image: url(https://kevinkoetz.github.io/Wood-n-Stone/images/den-trushtin-ApsLq7FAbiE-unsplash_sm.jpg);
     background-attachment: fixed;
     background-size: cover;
     z-index: -1;
     opacity: 0.5;
     @include media-breakpoint-up(md) {
-      background-image: url(../../images/den-trushtin-ApsLq7FAbiE-unsplash_md.jpg);
+      background-image: url(https://kevinkoetz.github.io/Wood-n-Stone/images/den-trushtin-ApsLq7FAbiE-unsplash_md.jpg);
     }
 
     @include media-breakpoint-up(xxl) {
-      background-image: url(../../images/den-trushtin-ApsLq7FAbiE-unsplash_lg.jpg);
+      background-image: url(https://kevinkoetz.github.io/Wood-n-Stone/images/den-trushtin-ApsLq7FAbiE-unsplash_lg.jpg);
     }
   }
 
@@ -32,7 +32,7 @@ body {
       display: block;
       inset: 0;
       position: absolute;
-      background: url(../../images/joshua-bartell-6vvIBTvL90A-unsplash_1.jpg);
+      background: url(https://kevinkoetz.github.io/Wood-n-Stone/images/joshua-bartell-6vvIBTvL90A-unsplash_1.jpg);
       z-index: -2;
       filter: brightness(0.4);
     }
