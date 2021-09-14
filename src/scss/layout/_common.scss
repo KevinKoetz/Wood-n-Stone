@@ -9,7 +9,10 @@ body {
   &:after {
     content: "";
     position: fixed;
-    inset: 0;
+    top:0;
+      bottom: 0;
+      left: 0;
+      right: 0;
     background-image: url(https://kevinkoetz.github.io/Wood-n-Stone/images/den-trushtin-ApsLq7FAbiE-unsplash_sm.jpg);
     background-attachment: fixed;
     background-size: cover;
@@ -30,7 +33,10 @@ body {
     &:after {
       content: "";
       display: block;
-      inset: 0;
+      top:0;
+      bottom: 0;
+      left: 0;
+      right: 0;
       position: absolute;
       background: url(https://kevinkoetz.github.io/Wood-n-Stone/images/joshua-bartell-6vvIBTvL90A-unsplash_1.jpg);
       z-index: -2;
