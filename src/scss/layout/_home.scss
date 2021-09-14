@@ -60,17 +60,19 @@
   .items {
     display: grid;
     gap: 0.5em;
-    grid-template-columns: repeat(auto-fit, 260px);
+    grid-template-columns: repeat(auto-fit, 250px);
     grid-auto-rows: 1fr;
     justify-content: center;
     grid-auto-flow: row;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(sm) {
+      
         justify-content: space-between;
     }
 
     .item {
       position: relative;
+      width: 100%;
       .item-count {
         font-weight: 700;
         position: absolute;
