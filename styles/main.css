@@ -4400,7 +4400,7 @@ textarea.form-control-lg {
   color: #fff;
 }
 
-.card {
+.card, #references .reference, #contact .contactForm {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -4411,30 +4411,32 @@ textarea.form-control-lg {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
-.card > hr {
+.card > hr, #references .reference > hr, #contact .contactForm > hr {
   margin-right: 0;
   margin-left: 0;
 }
-.card > .list-group {
+.card > .list-group, #references .reference > .list-group, #contact .contactForm > .list-group {
   border-top: inherit;
   border-bottom: inherit;
 }
-.card > .list-group:first-child {
+.card > .list-group:first-child, #references .reference > .list-group:first-child, #contact .contactForm > .list-group:first-child {
   border-top-width: 0;
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
 }
-.card > .list-group:last-child {
+.card > .list-group:last-child, #references .reference > .list-group:last-child, #contact .contactForm > .list-group:last-child {
   border-bottom-width: 0;
   border-bottom-right-radius: calc(0.25rem - 1px);
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
-.card > .card-header + .list-group,
-.card > .list-group + .card-footer {
+.card > .card-header + .list-group, #references .reference > .card-header + .list-group, #contact .contactForm > .card-header + .list-group,
+.card > .list-group + .card-footer,
+#references .reference > .list-group + .card-footer,
+#contact .contactForm > .list-group + .card-footer {
   border-top: 0;
 }
 
-.card-body {
+.card-body, #contact .contactForm {
   flex: 1 1 auto;
   padding: 1rem 1rem;
 }
@@ -4515,7 +4517,7 @@ textarea.form-control-lg {
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
 
-.card-group > .card {
+.card-group > .card, #references .card-group > .reference, #contact .card-group > .contactForm {
   margin-bottom: 0.75rem;
 }
 @media (min-width: 576px) {
@@ -4523,36 +4525,44 @@ textarea.form-control-lg {
     display: flex;
     flex-flow: row wrap;
   }
-  .card-group > .card {
+  .card-group > .card, #references .card-group > .reference, #contact .card-group > .contactForm {
     flex: 1 0 0%;
     margin-bottom: 0;
   }
-  .card-group > .card + .card {
+  .card-group > .card + .card, #references .card-group > .reference + .card, #references .card-group > .card + .reference, #references .card-group > .reference + .reference, #contact .card-group > .contactForm + .card, #contact #references .card-group > .contactForm + .reference, #references #contact .card-group > .contactForm + .reference, #contact .card-group > .card + .contactForm, #contact #references .card-group > .reference + .contactForm, #references #contact .card-group > .reference + .contactForm, #contact .card-group > .contactForm + .contactForm {
     margin-left: 0;
     border-left: 0;
   }
-  .card-group > .card:not(:last-child) {
+  .card-group > .card:not(:last-child), #references .card-group > .reference:not(:last-child), #contact .card-group > .contactForm:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-top,
-.card-group > .card:not(:last-child) .card-header {
+  .card-group > .card:not(:last-child) .card-img-top, #references .card-group > .reference:not(:last-child) .card-img-top, #contact .card-group > .contactForm:not(:last-child) .card-img-top,
+.card-group > .card:not(:last-child) .card-header,
+#references .card-group > .reference:not(:last-child) .card-header,
+#contact .card-group > .contactForm:not(:last-child) .card-header {
     border-top-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-bottom,
-.card-group > .card:not(:last-child) .card-footer {
+  .card-group > .card:not(:last-child) .card-img-bottom, #references .card-group > .reference:not(:last-child) .card-img-bottom, #contact .card-group > .contactForm:not(:last-child) .card-img-bottom,
+.card-group > .card:not(:last-child) .card-footer,
+#references .card-group > .reference:not(:last-child) .card-footer,
+#contact .card-group > .contactForm:not(:last-child) .card-footer {
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:first-child) {
+  .card-group > .card:not(:first-child), #references .card-group > .reference:not(:first-child), #contact .card-group > .contactForm:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-top,
-.card-group > .card:not(:first-child) .card-header {
+  .card-group > .card:not(:first-child) .card-img-top, #references .card-group > .reference:not(:first-child) .card-img-top, #contact .card-group > .contactForm:not(:first-child) .card-img-top,
+.card-group > .card:not(:first-child) .card-header,
+#references .card-group > .reference:not(:first-child) .card-header,
+#contact .card-group > .contactForm:not(:first-child) .card-header {
     border-top-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-bottom,
-.card-group > .card:not(:first-child) .card-footer {
+  .card-group > .card:not(:first-child) .card-img-bottom, #references .card-group > .reference:not(:first-child) .card-img-bottom, #contact .card-group > .contactForm:not(:first-child) .card-img-bottom,
+.card-group > .card:not(:first-child) .card-footer,
+#references .card-group > .reference:not(:first-child) .card-footer,
+#contact .card-group > .contactForm:not(:first-child) .card-footer {
     border-bottom-left-radius: 0;
   }
 }
@@ -11313,27 +11323,29 @@ body footer .navbar #navbarNav {
   height: 10em;
   object-fit: cover;
 }
-#home .items .item .card-body {
+#home .items .item .card-body, #home .items .item #contact .contactForm, #contact #home .items .item .contactForm {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-#home .items .item .card-body form {
+#home .items .item .card-body form, #home .items .item #contact .contactForm form, #contact #home .items .item .contactForm form {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-#home .items .item .card-body form table tr > th,
-#home .items .item .card-body form table tr > td {
+#home .items .item .card-body form table tr > th, #home .items .item #contact .contactForm form table tr > th, #contact #home .items .item .contactForm form table tr > th,
+#home .items .item .card-body form table tr > td,
+#home .items .item #contact .contactForm form table tr > td,
+#contact #home .items .item .contactForm form table tr > td {
   padding-right: 1em;
 }
-#home .items .item .card-body form input[type=number] {
+#home .items .item .card-body form input[type=number], #home .items .item #contact .contactForm form input[type=number], #contact #home .items .item .contactForm form input[type=number] {
   width: 100%;
 }
-#home .items .item .card-body form input[type=number]:invalid {
+#home .items .item .card-body form input[type=number]:invalid, #home .items .item #contact .contactForm form input[type=number]:invalid, #contact #home .items .item .contactForm form input[type=number]:invalid {
   border-color: red;
 }
-#home .items .item .card-body form .btn {
+#home .items .item .card-body form .btn, #home .items .item #contact .contactForm form .btn, #contact #home .items .item .contactForm form .btn {
   align-self: center;
 }
 #home .items .item.unavail .card-img-top {
@@ -11359,20 +11371,18 @@ body footer .navbar #navbarNav {
   width: 100%;
 }
 
+#contact .contactForm > * {
+  margin-bottom: 1rem;
+}
+#contact .contactForm textarea {
+  min-height: 20em;
+}
+#contact .contactForm button {
+  align-self: flex-end;
+}
+
 #references hr {
   color: var(--bs-primary);
-}
-#references .reference {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: var(--bs-white);
-  background-clip: border-box;
-  border: 1px solid var(--bs-gray-300);
-  border-radius: 0.25rem;
-  overflow: hidden;
 }
 #references .reference:not(:last-child) {
   margin-bottom: 3em;
@@ -11383,17 +11393,6 @@ body footer .navbar #navbarNav {
 #references .reference section {
   isolation: isolate;
   position: relative;
-  /*  &:not(:last-child)::after {
-     content: "";
-     display: block;
-     position: absolute;
-     background: linear-gradient(to right, var(--bs-gray-300), hsla(0, 0%, 100%, 0));
-     height: 1px;
-     width: 80%;
-     left:0;
-     margin: auto;
-     bottom: 0.5em;
-   } */
 }
 #references .reference section img {
   max-height: 20em;
