@@ -37,8 +37,8 @@ body {
       filter: brightness(0.4);
     }
     &::before {
-        --height: 4px;
-        --blur: 2px;
+        --height: 0.5rem;
+        --blur: 0.1rem;
         content: "";
         display: block;
         width: 100%;
