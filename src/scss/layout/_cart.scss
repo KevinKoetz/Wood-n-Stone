@@ -7,7 +7,7 @@
         & > * {
             position: relative;
         }
-        & > *:after {
+        & > *:not(:last-child):after {
             content: "";
             width: 100%;
             display: block;
@@ -25,7 +25,13 @@
         
     }
 
-    .items{ 
+    .items{
+        display: grid;
+    gap: 0.5em;
+    grid-template-columns: repeat(auto-fit, 250px);
+    grid-auto-rows: 1fr;
+    justify-content: center;
+    grid-auto-flow: row;
         .item{
             padding: 1em 0;
             position: relative;
@@ -39,7 +45,7 @@
                 bottom: 0;
                 background-color: var(--bs-gray-300);
             }
-            form {
+            .item-controls {
                 display: flex;
                 align-items: center;
                 justify-content: space-evenly;
@@ -57,6 +63,19 @@
                 width: 100%;
             }
         }
+    }
+
+
+    fieldset {
+        padding: 1rem 0;
+        &>*:not(:first-child, :last-child) {
+            margin: 0.5rem 0;
+        }
+    }
+
+    fieldset:last-child {
+        display: flex;
+        justify-content: flex-end;
     }
 
     .total {

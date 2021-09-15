@@ -1,12 +1,12 @@
 <div id="cart">
-  <div class="wrapper">
+  <form class="wrapper">
     <h4>Shopping Cart</h4>
     <section class="items">
       <div class="item">
         <h5 class="item-title">Cat figure</h5>
         <img src="./images/IMG_20210206_1728310.jpg" alt="..." />
         <div>
-          <form>
+          <div class="item-controls">
             <input
               type="number"
               min="1"
@@ -20,7 +20,7 @@
             x <span class="price">14.99€</span>
 
             <i class="fas fa-trash-alt"></i>
-          </form>
+          </div>
         </div>
       </div>
 
@@ -28,7 +28,7 @@
         <h5 class="item-title">Earrings</h5>
         <img src="./images/IMG_20210703_1050193.jpg" alt="..." />
         <div>
-          <form>
+          <div class="item-controls">
             <input
               type="number"
               min="1"
@@ -42,10 +42,137 @@
             x <span class="price">14.99€</span>
 
             <i class="fas fa-trash-alt"></i>
-          </form>
+          </div>
         </div>
       </div>
+
     </section>
     <span class="total">Total: <span id="total">29.98€</span></span>
-  </div>
+    <fieldset id="shipping">
+      <h4>Shipping Address</h4>
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="first-name"
+          placeholder="First name"
+        />
+        <label for="first-name">First name</label>
+      </div>
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="last-name"
+          placeholder="Last name"
+        />
+        <label for="last-name">Last name</label>
+      </div>
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="street"
+          placeholder="Street"
+        />
+        <label for="first-name">Street</label>
+      </div>
+      <div class="form-floating">
+        <input
+          type="number"
+          class="form-control"
+          id="house-number"
+          placeholder="Number"
+        />
+        <label for="house-number">House Number</label>
+      </div>
+      <div class="form-floating">
+        <input
+          type="number"
+          class="form-control"
+          id="postal-code"
+          placeholder="Postal Code"
+        />
+        <label for="postal-code">Postal Code</label>
+      </div>
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="country"
+          placeholder="Country"
+        />
+        <label for="country">Country</label>
+      </div>
+    </fieldset>
+    <fieldset id="invoice">
+      <h4>Invoice Address</h4>
+      <div class="form-check">
+        
+        <input type="checkbox" name="sameAsShipping" id="sameAsShipping" class="form-check-input" checked>
+        <label for="sameAsShipping" class="form-check-label">Same as shipping</label>
+      </div>
+      
+      <div id="invoice-adress-wrapper" class="d-none">
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="invoice-first-name"
+            placeholder="First name"
+          />
+          <label for="invoice-first-name">First name</label>
+        </div>
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="invoice-last-name"
+            placeholder="Last name"
+          />
+          <label for="invoice-last-name">Last name</label>
+        </div>
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="invoice-street"
+            placeholder="invoice-Street"
+          />
+          <label for="first-name">Street</label>
+        </div>
+        <div class="form-floating">
+          <input
+            type="number"
+            class="form-control"
+            id="invoice-house-number"
+            placeholder="Number"
+          />
+          <label for="invoice-house-number">House Number</label>
+        </div>
+        <div class="form-floating">
+          <input
+            type="number"
+            class="form-control"
+            id="invoice-postal-code"
+            placeholder="Postal Code"
+          />
+          <label for="invoice-postal-code">Postal Code</label>
+        </div>
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="invoice-country"
+            placeholder="Country"
+          />
+          <label for="invoice-country">Country</label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <button type="button" class="btn btn-primary">Order</button>
+    </fieldset>
+    
+  </form>
 </div>
