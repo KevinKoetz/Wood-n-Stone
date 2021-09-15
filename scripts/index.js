@@ -87,6 +87,12 @@ async function loadPage(hash) {
         });
       }
     }
+    if (hash === "#cart") {
+      document.getElementById("sameAsShipping").addEventListener("change", (e)=> {
+
+          document.getElementById("invoice-adress-wrapper").classList.toggle("d-none");
+      })
+    }
   } else {
     document.getElementById("main").innerHTML =
       "Ooops, something went wrong. Can not load the page.";

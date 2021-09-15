@@ -11412,7 +11412,7 @@ body footer .navbar #navbarNav {
 #cart .wrapper > * {
   position: relative;
 }
-#cart .wrapper > *:after {
+#cart .wrapper > *:not(:last-child):after {
   content: "";
   width: 100%;
   display: block;
@@ -11425,6 +11425,14 @@ body footer .navbar #navbarNav {
 #cart h4, #cart .h4 {
   margin: 0;
   padding-bottom: 1rem;
+}
+#cart .items {
+  display: grid;
+  gap: 0.5em;
+  grid-template-columns: repeat(auto-fit, 250px);
+  grid-auto-rows: 1fr;
+  justify-content: center;
+  grid-auto-flow: row;
 }
 #cart .items .item {
   padding: 1em 0;
@@ -11440,7 +11448,7 @@ body footer .navbar #navbarNav {
   bottom: 0;
   background-color: var(--bs-gray-300);
 }
-#cart .items .item form {
+#cart .items .item .item-controls {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -11455,6 +11463,19 @@ body footer .navbar #navbarNav {
 }
 #cart .items .item img {
   width: 100%;
+}
+#cart fieldset {
+  padding: 1rem 0;
+}
+#cart fieldset > *:not(:first-child, :last-child) {
+  margin: 0.5rem 0;
+}
+#cart #invoice-adress-wrapper > *:not(:first-child, :last-child) {
+  margin: 0.5rem 0;
+}
+#cart fieldset:last-child {
+  display: flex;
+  justify-content: flex-end;
 }
 #cart .total {
   padding: 1em 0;
